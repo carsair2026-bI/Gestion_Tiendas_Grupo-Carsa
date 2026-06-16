@@ -19,54 +19,60 @@ body{
     background:linear-gradient(135deg,#f5f7fa,#e4e8f0);
     font-family:'Segoe UI',sans-serif;
     min-height:100vh;
-    padding:15px;
+    padding:20px;
 }
 
 .navbar{
     background:#E51C22;
-    border-radius:20px;
-    padding:8px 25px;
-    margin-bottom:20px;
+    border-radius:25px;
+    padding:12px 30px;
+    margin-bottom:25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-.navbar-title{
-    color:white;
-    font-size:34px;
-    font-weight:700;
+.navbar-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
 .logo{
-    height:90px;
+    height:80px;
     width:auto;
     object-fit:contain;
+}
+
+.navbar-title{
+    color:white;
+    font-size:42px;
+    font-weight:800;
 }
 
 .dashboard-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-bottom:20px;
+    gap:25px;
+    margin-bottom:25px;
 }
 
 .card-btn{
     display:flex;
     align-items:center;
-    gap:18px;
-    padding:18px 22px;
-    border-radius:20px;
+    gap:20px;
+    padding:25px;
+    border-radius:28px;
     background:white;
-    border-left:6px solid #E51C22;
+    border-left:8px solid #E51C22;
     cursor:pointer;
     transition:.35s;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .card-btn:hover{
-    transform:translateY(-6px);
+    transform:translateY(-8px);
     background:#E51C22;
     color:white;
     box-shadow:0 20px 40px rgba(229,28,34,.25);
@@ -76,35 +82,40 @@ body{
     color:white;
 }
 
+.card-btn:hover i{
+    color:white;
+}
+
 .card-btn i{
-    font-size:38px;
-    min-width:50px;
+    font-size:52px;
+    min-width:60px;
 }
 
 .card-btn h3{
     margin:0;
-    font-size:20px;
+    font-size:24px;
+    font-weight:700;
 }
 
 .card-btn p{
-    margin-top:4px;
+    margin-top:5px;
     color:#6b7280;
-    font-size:14px;
+    font-size:16px;
 }
 
 .report-card{
     background:white;
-    border-radius:12px;
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .report-header{
     background:linear-gradient(135deg,#ff4d4d,#d90429);
     color:white;
-    padding:12px;
+    padding:14px;
     text-align:center;
-    font-size:24px;
+    font-size:28px;
     font-weight:700;
 }
 
@@ -118,28 +129,28 @@ body{
 }
 
 .placeholder-title{
-    font-size:42px;
+    font-size:48px;
     font-weight:800;
     color:#dc3545;
 }
 
 .placeholder-text{
-    margin-top:10px;
+    margin-top:15px;
     color:#6b7280;
-    font-size:18px;
+    font-size:20px;
+}
+
+.arrow{
+    font-size:60px;
+    display:inline-block;
+    animation:bounce 1.2s infinite;
 }
 
 iframe{
     width:100%;
-    height:850px;
+    height:900px;
     border:none;
     display:none;
-}
-
-.arrow{
-    font-size:50px;
-    display:inline-block;
-    animation:bounce 1.2s infinite;
 }
 
 @keyframes bounce{
@@ -151,7 +162,7 @@ iframe{
     }
 }
 
-@media(max-width:900px){
+@media(max-width:1200px){
 
     .dashboard-grid{
         grid-template-columns:1fr;
@@ -159,12 +170,17 @@ iframe{
 
     .navbar{
         flex-direction:column;
-        gap:10px;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .navbar-left{
+        flex-direction:column;
         text-align:center;
     }
 
     .navbar-title{
-        font-size:26px;
+        font-size:32px;
     }
 
     .logo{
@@ -179,14 +195,18 @@ iframe{
 
 <div class="navbar">
 
-    <div class="navbar-title">
-        Reportes Grupo Carsa
-    </div>
+    <div class="navbar-left">
 
-    <img
-        src="https://carsair2026-bi.github.io/Gestion_Tiendas_Grupo-Carsa/logo.png"
-        class="logo"
-        alt="Logo">
+        <img
+            src="logo.png"
+            class="logo"
+            alt="Logo Grupo Carsa">
+
+        <div class="navbar-title">
+            Reportes Grupo Carsa
+        </div>
+
+    </div>
 
 </div>
 
