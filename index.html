@@ -53,9 +53,13 @@ body{
 
 .dashboard-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-bottom:25px;
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+    gap:15px;
+    margin-bottom:15px;
+    justify-content:center;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .card-btn{
@@ -224,6 +228,18 @@ iframe{
 
     </div>
 
+    <div class="card-btn"
+         onclick="cargarReporte('Venta QT','https://app.powerbi.com/view?r=eyJrIjoiMjZkMmU3MjctZjk2My00ZGVlLWI1YzEtNjdmNjgwOGYzODc5IiwidCI6IjAyMDhhY2YzLTJiYjQtNGMzYi04MGQ5LTM2YTY4M2Y3OWZkNiJ9&pageName=2b13e294406015565300')">
+
+        <i class="bi bi-cash"></i>
+
+        <div>
+            <h3>Venta Credi Cash</h3>
+            <p>Indicadores Desembolso Efectivo</p>
+        </div>
+
+    </div>
+    
     <div class="card-btn"
          onclick="cargarReporte('Liquidación Antigüedad','https://app.powerbi.com/view?r=eyJrIjoiNDg4NWZiNzQtY2M1MC00ZjJhLTg5OWItYmNhNTgyMDY5YzBhIiwidCI6IjAyMDhhY2YzLTJiYjQtNGMzYi04MGQ5LTM2YTY4M2Y3OWZkNiJ9&pageName=5ef92a0a4e9e89bd680e')">
 
