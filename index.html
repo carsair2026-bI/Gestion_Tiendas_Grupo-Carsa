@@ -55,7 +55,7 @@ body{
 
 .dashboard-grid{
     display:grid;
-    grid-template-columns:repeat(6, minmax(200px, 280px));
+    grid-template-columns:repeat(4, minmax(200px, 280px));
     gap:12px;
     justify-content:center;
     margin-bottom:15px;
@@ -275,6 +275,15 @@ iframe{
         <div>
             <h3>Bolsa Tienda</h3>
             <p>Indicadores estratégicos</p>
+        </div>
+    </div>
+
+    <div class="card-btn"
+         onclick="cargarReporte('OIC','URL_OIC_AQUI')">
+        <i class="bi bi-eye"></i>
+        <div>
+            <h3>OIC</h3>
+            <p>Indicadores OIC</p>
         </div>
     </div>
 
